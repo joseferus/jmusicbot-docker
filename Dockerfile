@@ -12,9 +12,12 @@ ENV BOT_VERSION="latest"
 ENV BOT_GITHUB="SeVile/MusicBot"
 
 COPY run_bot.sh /app/run_bot.sh
+COPY install_docker.sh /app/install_docker.sh
 RUN chmod +x /app/run_bot.sh
+RUN chmod +x /app/install_docker.sh
 
 WORKDIR /app
 VOLUME /config
 
+CMD ["./install_docker"]
 CMD ["./run_bot.sh"]
