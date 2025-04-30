@@ -1,18 +1,16 @@
 # JMusicBot Docker
-[![Release](https://img.shields.io/github/release/jagrosh/MusicBot?color=g&style=for-the-badge)](https://github.com/jagrosh/MusicBot/releases/latest)
-![Supports amd64 Architecture](https://img.shields.io/badge/amd64-yes-blueviolet.svg?style=for-the-badge)
-![Supports arm64 Architecture](https://img.shields.io/badge/arm64-yes-blueviolet.svg?style=for-the-badge)
 
-A simple Docker container for [JMusicBot](https://github.com/jagrosh/MusicBot). The container will start up, then download JMusicBot from the projects repository and run it.
+A simple Docker container for [JMusicBot](https://github.com/SeVile/MusicBot). The container will start up, then download JMusicBot from the projects repository and run it.  
+The current YouTube source requires docker to be installed _inside_ the container itself, this fork adds a step to do this since it would need to be done manually (which can be a hassle) and redone if the container is ever removed.
 
 ## Usage
 - Place your **config.txt**, **Playlists** folder, and **serversettings.json** file (if you have one) in `/your/path/to/config`. This directory will be shared with the container.
   > Refer to the documentaion on how to [configure the bot](https://jmusicbot.com/setup/#3-configure-the-bot)
 - You can specify a JMusicBot version using the environment variable `BOT_VERSION`. By default the latest version will be downloaded so you don't have to include the variable if you want to use latest.
-  > The version numbers you can use correspond to the [releases](https://github.com/jagrosh/MusicBot/releases) tag, not the release name.
-- Optionally, specify a JMusicBot repository to use by the environment variable `BOT_GITHUB`. This is ideal for using forks of the main repo when something breaks, and no fixes are yet available. It is recommended to set `updatealerts=false` in the bot config when using this option. By default this will be the official repository, `jagrosh/MusicBot`.
-  > - [jagrosh/MusicBot](https://github.com/jagrosh/MusicBot)
+  > The version numbers you can use correspond to the [releases](https://github.com/SeVile/MusicBot/releases) tag, not the release name.
+- Optionally, specify a JMusicBot repository to use by the environment variable `BOT_GITHUB`. This is ideal for using forks of the main repo when something breaks, and no fixes are yet available. It is recommended to set `updatealerts=false` in the bot config when using this option. By default this will be the SeVile's fork of the original repository, `SeVile/MusicBot`.
   > - [SeVile/MusicBot](https://github.com/SeVile/MusicBot/)
+  > - [jagrosh/MusicBot](https://github.com/jagrosh/MusicBot)
 
 
 ### Docker examples
