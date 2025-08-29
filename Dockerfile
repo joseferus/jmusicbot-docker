@@ -9,7 +9,7 @@ RUN install_packages openjdk-11-jre-headless wget curl grep \
 STOPSIGNAL SIGTERM
 
 ENV BOT_VERSION="latest"
-ENV BOT_GITHUB="SeVile/MusicBot"
+ENV BOT_GITHUB="jellyo-o/JellyoMusicBot"
 
 COPY run_bot.sh /app/run_bot.sh
 COPY install_docker.sh /app/install_docker.sh
