@@ -2,6 +2,7 @@
 
 echo -e "installing docker with script"
 ./install_docker.sh
+source
 echo -e "docker installed, getting music bot"
 
 # Get latest or specified tag version
