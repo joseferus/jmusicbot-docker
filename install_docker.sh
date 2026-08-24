@@ -12,10 +12,10 @@ echo -e "Dependencies download, certificates configured"
 
 echo -e "Adding the Docker repository to the apt sources list"
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian bullseye stable" | \
-	/etc/apt/sources.list.d/docker.list > /dev/null
+	tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
 
-if [ $? -ne 0 ]
+if [ $? -ne 0 ]; then
 	echo -e "Adding to apt sources failed"
 	exit 1
 fi
