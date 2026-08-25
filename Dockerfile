@@ -19,10 +19,13 @@ STOPSIGNAL SIGTERM
 
 COPY run_bot.sh /app/run_bot.sh
 COPY install_docker.sh /app/install_docker.sh
+COPY jmusicbot.service /etc/systemd/systemd/jmusicbot.service
+
+RUN systemctl enable jmusicbot.service
 RUN chmod +x /app/run_bot.sh
 RUN chmod +x /app/install_docker.sh
 
 WORKDIR /app
 VOLUME /config
 
-CMD ["./run_bot.sh"]
+CMD ["/lib/systemd/systemd"]
