@@ -2,6 +2,9 @@ FROM trfore/docker-debian11-systemd
 
 ENV RUNLEVEL=1
 
+RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d
+RUN chmod +x /usr/sbin/policy-rc.d
+
 RUN apt-get update
 RUN apt-get --assume-yes install openjdk-11-jre-headless wget curl grep
 RUN mkdir /app
