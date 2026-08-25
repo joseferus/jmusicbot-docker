@@ -1,5 +1,7 @@
 FROM trfore/docker-debian11-systemd
 
+ENV RUNLEVEL=1
+
 RUN apt-get update
 RUN apt-get --assume-yes install openjdk-11-jre-headless wget curl grep
 RUN mkdir /app
@@ -19,5 +21,7 @@ RUN chmod +x /app/install_docker.sh
 
 WORKDIR /app
 VOLUME /config
+
+RUN "./install_docker.sh"
 
 CMD ["./run_bot.sh"]
