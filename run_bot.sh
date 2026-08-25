@@ -1,5 +1,13 @@
 #!/bin/bash
 
+echo -e "installing docker with script"
+./install_docker.sh
+if [ $? -ne 0 ]; then
+  echo "no docker :("
+  exit 1
+fi
+echo -e "docker installed, getting music bot"
+
 # Get latest or specified tag version
 if [ "$BOT_VERSION" == "latest" ]; then
   RELEASE_JSON=$(curl --silent "https://api.github.com/repos/${BOT_GITHUB}/releases/latest")
