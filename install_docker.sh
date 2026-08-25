@@ -14,7 +14,7 @@ echo "Dependencies download, certificates configured"
 echo "Adding the Docker repository to the apt sources list"
 touch /etc/apt/sources.list.d/docker.sources 
 echo "Types: deb" >> /etc/apt/sources.list.d/docker.sources 
-ehco "URIs: https://download.docker.com/linux/ubuntu" >> /etc/apt/sources.list.d/docker.sources  
+echo "URIs: https://download.docker.com/linux/ubuntu" >> /etc/apt/sources.list.d/docker.sources  
 echo "Suites: bullseye)" >> /etc/apt/sources.list.d/docker.sources 
 echo "Components: stable" >> /etc/apt/sources.list.d/docker.sources 
 echo "Architectures: amd64" >> /etc/apt/sources.list.d/docker.sources 
