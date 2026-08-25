@@ -25,6 +25,4 @@ RUN chmod +x /app/install_docker.sh
 WORKDIR /app
 VOLUME /config
 
-RUN "./install_docker.sh"
-
 CMD ["./run_bot.sh"]
