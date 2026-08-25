@@ -1,4 +1,4 @@
-FROM debian/eol:bullseye
+FROM trfore/docker-debian11-systemd
 
 RUN apt-get update
 RUN apt-get --assume-yes install openjdk-11-jre-headless wget curl grep
