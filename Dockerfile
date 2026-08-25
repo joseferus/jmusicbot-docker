@@ -28,4 +28,4 @@ RUN chmod +x /app/install_docker.sh
 WORKDIR /app
 VOLUME /config
 
-CMD ["/lib/systemd/systemd"]
+CMD ["/sbin/init"]
