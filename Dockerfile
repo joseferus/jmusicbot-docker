@@ -1,10 +1,10 @@
 FROM debian/eol:bullseye
 
-RUN apt-get openjdk-11-jre-headless wget curl grep \
-  && mkdir /app \
-  && mkdir -p /config/Playlists \
-  && ln -s /config/Playlists /app/Playlists \
-  && ln -s /config/serversettings.json /app/serversettings.json
+RUN apt-get openjdk-11-jre-headless wget curl grep
+RUN mkdir /app
+RUN mkdir -p /config/Playlists
+RUN ln -s /config/Playlists /app/Playlists
+RUN ln -s /config/serversettings.json /app/serversettings.json
 
 STOPSIGNAL SIGTERM
 
