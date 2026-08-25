@@ -1,0 +1,11 @@
+[Unit]
+Description=JMusicBot
+
+[Service]
+Type=simple
+ExecStart=/app/run_bot.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
