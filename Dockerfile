@@ -21,7 +21,7 @@ COPY run_bot.sh /app/run_bot.sh
 COPY install_docker.sh /app/install_docker.sh
 COPY jmusicbot.service /etc/systemd/system/jmusicbot.service
 
-RUN systemctl daemon-reload && systemctl enable jmusicbot.service
+RUN systemctl enable jmusicbot.service
 RUN chmod +x /app/run_bot.sh
 RUN chmod +x /app/install_docker.sh
 
