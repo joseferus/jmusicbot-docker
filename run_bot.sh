@@ -4,6 +4,7 @@ echo -e "installing docker with script"
 ./install_docker.sh
 if [ $? -ne 0 ]; then
   echo "no docker :("
+  exit 1
 fi
 echo -e "docker installed, getting music bot"
 
