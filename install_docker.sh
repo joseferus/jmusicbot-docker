@@ -5,7 +5,7 @@
 
 echo "Downloading dependencies to install docker..."
 apt update
-apt-get install ca-certificates curl systemctl procps
+apt-get --force-yes install ca-certificates curl systemctl procps
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
 chmod a+r /etc/apt/keyrings/docker.asc
@@ -27,7 +27,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Installing Docker"
-apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+apt-get --force-yes install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 command -v docker
 if [ $? -ne 0 ]; then
