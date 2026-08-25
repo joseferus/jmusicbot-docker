@@ -5,7 +5,7 @@
 
 echo "Downloading dependencies to install docker..."
 apt update
-apt-get --assume-yes install ca-certificates curl systemctl procps
+apt-get --assume-yes install ca-certificates curl
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
 chmod a+r /etc/apt/keyrings/docker.asc
