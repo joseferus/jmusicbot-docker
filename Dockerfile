@@ -1,4 +1,4 @@
-FROM bitnami/minideb:bullseye
+FROM debian/eol:bullseye
 
 RUN install_packages openjdk-11-jre-headless wget curl grep \
   && mkdir /app \
@@ -8,8 +8,8 @@ RUN install_packages openjdk-11-jre-headless wget curl grep \
 
 STOPSIGNAL SIGTERM
 
-ENV BOT_VERSION="latest"
-ENV BOT_GITHUB="jellyo-o/JellyoMusicBot"
+# ENV BOT_VERSION="latest"
+# ENV BOT_GITHUB="jellyo-o/JellyoMusicBot"
 
 COPY run_bot.sh /app/run_bot.sh
 COPY install_docker.sh /app/install_docker.sh
