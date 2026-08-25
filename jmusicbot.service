@@ -1,5 +1,6 @@
 [Unit]
 Description=JMusicBot
+After=multi-user.target
 
 [Service]
 Type=simple
