@@ -1,6 +1,6 @@
 FROM debian/eol:bullseye
 
-RUN apt-get openjdk-11-jre-headless wget curl grep
+RUN apt-get install openjdk-11-jre-headless wget curl grep
 RUN mkdir /app
 RUN mkdir -p /config/Playlists
 RUN ln -s /config/Playlists /app/Playlists
