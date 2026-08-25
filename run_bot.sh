@@ -2,7 +2,9 @@
 
 echo -e "installing docker with script"
 ./install_docker.sh
-source
+if [ $? -ne 0 ]; then
+  echo "no docker :("
+fi
 echo -e "docker installed, getting music bot"
 
 # Get latest or specified tag version
